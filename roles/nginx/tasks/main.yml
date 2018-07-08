@@ -2,5 +2,12 @@
 - name: install nginx
   yum: name=nginx state=present
 
+- name: copy default.conf
+  copy:
+    src: "{{ env }}/peru.conf"
+    dest: "/etc/nginx/conf.d/peru.conf"
+    owner: root
+    group: root
+
 - name: start and enable nginx
   service: name=nginx state=started enabled=yes
