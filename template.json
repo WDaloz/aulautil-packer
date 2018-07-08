@@ -20,7 +20,7 @@
       "source_ami": "ami-0ad99772",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
-      "ami_name": "common_packer_{{user `version`}}"
+      "ami_name": "{{user `env`}}_packer_{{user `version`}}"
     }
   ]
 }
